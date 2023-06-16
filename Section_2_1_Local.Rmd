@@ -1,0 +1,99 @@
+---
+title: "Section_2_1_Local"
+output:
+  html_document: default
+  pdf_document: default
+date: "2023-06-12"
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+# 2.Data
+
+## 2.1 Data Collection
+
+The data for this study has been downloaded by using Twitter's API. A
+very select set of queries was executed aiming to capture sentiment of
+Twitter's users regarding Joe Biden's reelection. All queries included
+the operators: **lang:en** and **place_country:US**, ensuring that only
+tweets from the US version of Twitter, and posted in English will be
+downloaded. Moreover, all queries collected tweets posted only by the
+verified users. The parameters used in the five queries and their
+descriptions are presented below:
+
+1.  **Discussion about Biden's reelection\
+    \
+    ***'Biden' (reelect OR reelection OR #Biden2024 OR #BidenHarris2024)
+    place_country:US lang:en is:verified -replies: tweets with keywords
+    "Biden" AND "reelect", include the original Tweets, Quote Tweets,
+    Retweets***\
+    \
+    **This query searches for tweets containing tweets mentioning
+    president Biden, which are written in conjunction with either
+    'reelect' or 'reelection' or containing specific hashtags:
+    #Biden2024 or BidenHarris2024. Both original tweets and retweets are
+    included, as well as Quote tweets, allowing users to share another
+    tweet and add their own comment in the same tweet. Tweets collected
+    by executing this query provide information about the sentiment on
+    the possible reelection, as well as the topics discussed next to it.
+
+2.  **Replies to Joe Biden's account about reelection**\
+    \
+    *to:JoeBiden (reelect OR reelection) lang:en : replies that mention
+    reelection to joebiden* \
+    \
+    The second query looks for replies to Joe Biden's account that
+    contain 'reelect' or 'reelection'. Collecting these tweets aims to
+    capture opinions of different individuals on the Biden's run for the
+    second term.\
+
+3.  **Replies to the Joe Biden's tweet with announcement of running for
+    rellection**\
+    \
+    *in_reply_to_tweet_id:1650801827728986112 lang:en*\
+    \
+    All replies to the tweet announcing the Joe Biden's reelection under
+    the motto: *'Every generation has a moment where they have had to
+    stand up for democracy'* are collected by executing query. It aims
+    to invastigate the public reactions to the announcement. The post
+    can be found under this adress:
+    <https://twitter.com/JoeBiden/status/1650801827728986112>\
+
+4.  **Replies to the Kamala Hariss' tweet with announcement of running
+    for rellection**\
+    \
+    *in_reply_to_tweet_id:1650804897439268866 lang:en\
+    \
+    *Similarly to query 3, the responses to tweet announcing the
+    reelection are downloaded. In contrast, the responses are downloaded
+    to the post shared at Kamala Harriss' account. The post can be found
+    under this adress:
+    <https://twitter.com/KamalaHarris/status/1650804897439268866>\
+
+5.  **Reactions on the donating campaign launched by Joe Biden and
+    Kamala Harris**\
+    \
+    *From:JoeBiden OR from:POTUS OR from:KamalaHarris
+    url:"[https://secure.actblue.com/donate/social-bfp-may-2023?refcode=social_20230510_jb_tw_1"](https://secure.actblue.com/donate/social-bfp-may-2023?refcode=social_20230510_jb_tw_1%22)
+    is:verified lang:en*\
+    \
+    By executing the fitth query, the replies and comments to the tweets
+    posted by Joe Biden and Kamala Harris containing the link presened
+    above, which refers the Twitter users to their campaign of acquiring
+    funds for reelection are downloaded. It is assumed that those tweets
+    explain a significant part of public sentiment on donating the
+    campaign of the current US president and vice-president.
+
+[The queries were executed at the same time... For each query X tweets
+were collected...]{.underline}
+
+[The collected data set provides a comprehensive set of textual data on
+sentiment and topics mentioned in relation the the annoucement of Joe
+Biden's reelection]{.underline}
+
+Due to the recently introduced limit of 10 thousand Tweets than can be
+collected by using Twitter API, the number of data collected for
+analysis conducted in this study had to be adjusted appropriately.
+Execution of the queries resulted in collecting nearly 5978 tweets and
+3162 reference tweets.
